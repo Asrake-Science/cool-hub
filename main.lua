@@ -39,55 +39,37 @@ Rayfield:Notify({
 local Autoclaim = Window:CreateTab("💼 | Office")
 local AutoclaimSection = Autoclaim:CreateSection("Miscellaneous")
 
-local AutoclaimButton = Autoclaim:CreateButton({
+local ClaimOffice = Autoclaim:CreateButton({
 	Name = "Claim an empty Scam Center",
 	Callback = function()
-
         for _, v in pairs(game.Workspace.Tycoons:GetChildren()) do
-
             if v:FindFirstChild("TycoonOwner") then
-
                 if v.TycoonOwner.Value == "" then
-
                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Claim.Claim.CFrame
-
                     return
-
                 end
-
             end
-
         end
-
-	end,
+end,
 })
 
-local BasementTpButton = Autoclaim:CreateButton({
+local OfficeTP = Autoclaim:CreateButton({
 	Name = "Teleport to Scam Center",
 	Callback = function()
-
         for _, v in pairs(game.Workspace.Tycoons:GetChildren()) do
-
             if v:FindFirstChild("TycoonOwner") then
-
                 if v.TycoonOwner.Value == tostring(game.Players.LocalPlayer) then
-
                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.TP.CFrame
-
                     return
-
                 end
-
             end
-
         end
-
-	end,
+end,
 })
-local AutomaticsTab = Window:CreateTab("🤖 | Automation")
-local AutomaticsSection = AutomaticsTab:CreateSection("Scam Seniors")
+local AutoTab = Window:CreateTab("🤖 | Automation")
+local AutoSection = AutoTab:CreateSection("Scam Seniors")
 
- local infcash = AutomaticsTab:CreateToggle({
+ local infcash = AutoTab:CreateToggle({
         Name = "Scam Loop",
         CurrentValue = false,
         Flag = "scammone",
@@ -96,7 +78,7 @@ local AutomaticsSection = AutomaticsTab:CreateSection("Scam Seniors")
             game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Notifications").Enabled = false
             game:GetService("Players").LocalPlayer.Data.ScamSpeed.Value = 0.1
             game:GetService("Players").LocalPlayer.Data.TransferSpeed.Value = 0.1
-            while scammone  and task.wait() do
+            while scammone  and task.wait(5.5) do
                 if not game:GetService("Players").LocalPlayer:FindFirstChild("GeneratedNumber") then
                     local a = game:GetService("ReplicatedStorage").Events.GenerateNumber:FireServer()
                     task.wait()
@@ -108,9 +90,9 @@ local AutomaticsSection = AutomaticsTab:CreateSection("Scam Seniors")
         end
     })
 
-local AutomaticsSection2 = AutomaticsTab:CreateSection("Upgrades")
+local AutoUpgrades = AutoTab:CreateSection("Upgrades")
 
-local UgradeAdvertisement = AutomaticsTab:CreateButton({
+local UgradeAdvertisement = AutoTab:CreateButton({
 	Name = "Upgrade Scamming Speed",
 	Callback = function()
     
@@ -123,7 +105,7 @@ local UgradeAdvertisement = AutomaticsTab:CreateButton({
 	end,
 })
 
-local UgradeSpeed = AutomaticsTab:CreateButton({
+local UgradeSpeed = AutoTab:CreateButton({
 	Name = "Upgrade Transfer Speed",
 	Callback = function()
 
@@ -136,7 +118,7 @@ local UgradeSpeed = AutomaticsTab:CreateButton({
 	end,
 })
 
-local UgradeDrive = AutomaticsTab:CreateButton({
+local UgradeDrive = AutoTab:CreateButton({
 	Name = "Upgrade Income per Scam",
 	Callback = function()
 
@@ -167,7 +149,7 @@ local INFYIELD = MethHeadTab:CreateButton({
     Name = "Infinite Yield",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
-        Rayfield:Notify({Title = "Infinite Yield", Content = "Enjoy INFINITE YIELD bro, dont fuck around too much or the anticheat fucks u up mane", Duration = 7})
+        Rayfield:Notify({Title = "Infinite Yield", Content = "I WOV CHEESSEEE BADUM!!!! Enjoy that IY bro <3", Duration = 7})
     end,
 })
 local PlrSection = MethHeadTab:CreateSection("Local Player")
@@ -222,3 +204,4 @@ local CreditsSection = CreditsTab:CreateSection("Developers and Contributors")
 local CreditsLabel1 = CreditsTab:CreateLabel("Scripting : supexian")
 local CreditsLabel2 = CreditsTab:CreateLabel("Advisory  : CRICKR0N")
 local CreditsLabel3 = CreditsTab:CreateLabel("🥵🥵 GOD I LOVE RAYFIELD UI LIBRARY ZAMN 🥵🥵")
+local CreditsLabel4 = CreditsTab:CreateLabel("✌️ Heavily Inspired by VaporArtworks Hub 🇩🇪")
