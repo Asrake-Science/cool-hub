@@ -18,7 +18,7 @@ local Window = Rayfield:CreateWindow({
 		FileName = "supexHUB_enjoyer",
 		SaveKey = true,
         GrabKeyFromSite = true,
-		Key = 'silly methhead'
+		Key = 'https://pastebin.com/raw/jBXEP0FB'
 	}
 })
 
