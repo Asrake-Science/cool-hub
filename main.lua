@@ -17,8 +17,8 @@ local Window = Rayfield:CreateWindow({
 		Note = "join discord.gg/4kRf7vVfrt 4 more scriptz",
 		FileName = "supexHUB_enjoyer",
 		SaveKey = true,
-        GrabKeyFromSite = true,
-		Key = 'https://pastebin.com/raw/jBXEP0FB'
+        GrabKeyFromSite = false,
+		Key = 'swagpexhubFTW'
 	}
 })
 
